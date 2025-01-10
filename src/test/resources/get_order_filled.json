@@ -1,0 +1,49 @@
+{
+  "order": {
+    "order_id": "a4ab4709-0678-47b8-9151-0c3540b9f6f5",
+    "product_id": "BTC-EUR",
+    "user_id": "f8e2f9dd-73fe-4c73-af3a-40f446e22403",
+    "order_configuration": {
+      "limit_limit_gtc": {
+        "base_size": "0.45646728",
+        "limit_price": "24442.5",
+        "post_only": true,
+        "rfq_disabled": false
+      }
+    },
+    "side": "BUY",
+    "client_order_id": "9389d8f1-5d49-4e5d-9526-d046bec0fba7",
+    "status": "FILLED",
+    "time_in_force": "GOOD_UNTIL_CANCELLED",
+    "created_time": "2023-08-23T17:42:11.993544Z",
+    "completion_percentage": "100.00",
+    "filled_size": "0.45646728",
+    "average_filled_price": "24442.5",
+    "fee": "",
+    "number_of_fills": "3",
+    "filled_value": "11157.2014914",
+    "pending_cancel": false,
+    "size_in_quote": false,
+    "total_fees": "11.1572014914",
+    "size_inclusive_of_fees": false,
+    "total_value_after_fees": "11168.3586928914",
+    "trigger_status": "INVALID_ORDER_TYPE",
+    "order_type": "LIMIT",
+    "reject_reason": "REJECT_REASON_UNSPECIFIED",
+    "settled": true,
+    "product_type": "SPOT",
+    "reject_message": "",
+    "cancel_message": "",
+    "order_placement_source": "RETAIL_ADVANCED",
+    "outstanding_hold_amount": "0",
+    "is_liquidation": false,
+    "last_fill_time": "2023-08-23T17:42:30.336265Z",
+    "edit_history": [],
+    "leverage": "",
+    "margin_type": "UNKNOWN_MARGIN_TYPE",
+    "retail_portfolio_id": "2c63d2f0-b67e-4157-aece-a1bdd6d7bb9f",
+    "originating_order_id": "",
+    "attached_order_id": "",
+    "attached_order_configuration": null
+  }
+}

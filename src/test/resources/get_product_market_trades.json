@@ -1,0 +1,28 @@
+{
+  "trades": [
+    {
+      "trade_id": "765658830",
+      "product_id": "BTC-USD",
+      "price": "102605.49",
+      "size": "0.0000193",
+      "time": "2025-01-23T08:02:10.985501Z",
+      "side": "SELL",
+      "bid": "",
+      "ask": "",
+      "exchange": "coinbase"
+    },
+    {
+      "trade_id": "765658829",
+      "product_id": "BTC-USD",
+      "price": "102605.49",
+      "size": "0.00649983",
+      "time": "2025-01-23T08:02:10.660749Z",
+      "side": "SELL",
+      "bid": "",
+      "ask": "",
+      "exchange": "coinbase"
+    }
+  ],
+  "best_bid": "102605.48",
+  "best_ask": "102605.49"
+}

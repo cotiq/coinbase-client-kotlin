@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "success_response": {
+    "order_id": "e5ed0e4f-3c86-4bec-818a-707fee427180",
+    "product_id": "SOL-USDC",
+    "side": "BUY",
+    "client_order_id": "3a7b42c6-cc12-4932-98ba-33fd8ddb60a0",
+    "attached_order_id": ""
+  },
+  "order_configuration": {
+    "limit_limit_gtc": {
+      "base_size": "0.1",
+      "limit_price": "100",
+      "post_only": true,
+      "rfq_disabled": false
+    }
+  }
+}

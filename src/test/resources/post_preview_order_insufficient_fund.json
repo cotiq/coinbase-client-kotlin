@@ -1,0 +1,25 @@
+{
+  "order_total": "30.105",
+  "commission_total": "0.105",
+  "errs": [
+    "PREVIEW_INSUFFICIENT_FUND"
+  ],
+  "warning": [
+    "UNKNOWN"
+  ],
+  "quote_size": "30",
+  "base_size": "0.3",
+  "best_bid": "255.9",
+  "best_ask": "255.91",
+  "is_max": false,
+  "order_margin_total": "0",
+  "leverage": "0",
+  "long_leverage": "0",
+  "short_leverage": "0",
+  "slippage": "0",
+  "preview_id": "8991b857-7146-446f-9e84-47b1c6e7b304",
+  "current_liquidation_buffer": "0",
+  "projected_liquidation_buffer": "0",
+  "max_leverage": "",
+  "pnl_configuration": null
+}

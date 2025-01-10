@@ -1,0 +1,23 @@
+{
+  "order_total": "",
+  "commission_total": "",
+  "errs": [
+    "PREVIEW_INVALID_ORDER_CONFIG"
+  ],
+  "warning": [],
+  "quote_size": "",
+  "base_size": "",
+  "best_bid": "",
+  "best_ask": "",
+  "is_max": false,
+  "order_margin_total": "",
+  "leverage": "",
+  "long_leverage": "",
+  "short_leverage": "",
+  "slippage": "",
+  "preview_id": "3ad5e0aa-6be8-42c1-991c-113792307c7a",
+  "current_liquidation_buffer": "",
+  "projected_liquidation_buffer": "",
+  "max_leverage": "",
+  "pnl_configuration": null
+}
