@@ -14,9 +14,9 @@ import kotlinx.atomicfu.update
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.buffer
+import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.json.Json
@@ -127,11 +127,10 @@ class DefaultWebSocketClient(
         state.update { newState }
     }
 
-    override fun onMessage(block: (Message<out Event>) -> Unit) {
+    override fun <E: Event> onMessage(block: (message: Message<E>) -> Unit) {
         messages.buffer(config.messageBufferSize)
-            .onEach {
-                coroutineScope.launch { block(it) }
-            }
+            .filterIsInstance<Message<E>>()
+            .onEach { block(it) }
             .launchIn(coroutineScope)
     }
 

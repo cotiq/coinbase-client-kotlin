@@ -54,7 +54,7 @@ interface WebSocketClient {
     /**
      * Registers a callback to be invoked for every received message.
      */
-    fun onMessage(block: (Message<out Event>) -> Unit)
+    fun <E: Event> onMessage(block: (message: Message<E>) -> Unit)
 
     /**
      * Registers a callback to be invoked when the connection state changes.
