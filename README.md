@@ -20,6 +20,13 @@ This is an unofficial Kotlin client for the [Coinbase Advanced Trade API](https:
 | ☐  | Payment Methods             |
 | ☐  | Data API                    |
 
+## Releases
+
+The latest release is available on [Maven Central](https://central.sonatype.com/artifact/com.cotiq.lab/coinbase-client-kotlin):
+
+```kotlin
+implementation("com.cotiq.lab:coinbase-client-kotlin:0.0.1")
+```
 
 ## Quick Start
 
@@ -54,7 +61,7 @@ Use heartbeats channel to keep your connection alive:
 val client = WebSocketClientBuilder()
     .setDataFeed(DataFeed.MarketData)
     .build()
-client.onMessage {
+client.onMessage<HeartbeatEvent> {
     println("onMessage: $it")
 }
 client.onState {
