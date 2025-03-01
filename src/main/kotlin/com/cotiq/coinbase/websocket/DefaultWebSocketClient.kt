@@ -14,14 +14,16 @@ import kotlinx.atomicfu.update
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.buffer
-import kotlinx.coroutines.flow.filterIsInstance
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.json.Json
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import kotlin.reflect.KClass
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
 
@@ -127,9 +129,11 @@ class DefaultWebSocketClient(
         state.update { newState }
     }
 
-    override fun <E: Event> onMessage(block: (message: Message<E>) -> Unit) {
+    @Suppress("UNCHECKED_CAST")
+    override fun <E : Event> onMessage(eventType: KClass<E>, block: (message: Message<E>) -> Unit) {
         messages.buffer(config.messageBufferSize)
-            .filterIsInstance<Message<E>>()
+            .filter { message -> message.events.any { eventType.isInstance(it) } }
+            .map { it as Message<E> }
             .onEach { block(it) }
             .launchIn(coroutineScope)
     }

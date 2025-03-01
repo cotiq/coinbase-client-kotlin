@@ -6,6 +6,7 @@ import com.cotiq.coinbase.websocket.message.FeedChannel
 import com.cotiq.coinbase.websocket.message.Message
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlin.reflect.KClass
 
 
 sealed class ConnectionState {
@@ -54,7 +55,7 @@ interface WebSocketClient {
     /**
      * Registers a callback to be invoked for every received message.
      */
-    fun <E: Event> onMessage(block: (message: Message<E>) -> Unit)
+    fun <E : Event> onMessage(eventType: KClass<E>, block: (message: Message<E>) -> Unit)
 
     /**
      * Registers a callback to be invoked when the connection state changes.

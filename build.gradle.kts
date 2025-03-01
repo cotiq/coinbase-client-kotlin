@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.cotiq.lab"
-version = "0.0.1"
+version = "0.0.2"
 
 java {
     withSourcesJar()
@@ -54,7 +54,7 @@ publishing {
                 val projectGitUrl = "https://github.com/cotiq/coinbase-client-kotlin"
 
                 name = "Unofficial Coinbase Advanced Trade APi client"
-                description = "An SDK for seamless integration with Coinbase Advanced Trade API, supporting both REST and WebSocket communication"
+                description = "Unofficial SDK for integrating with the Coinbase Advanced Trade API, supporting both REST and WebSocket communication."
                 url = projectGitUrl
                 licenses {
                     license {
