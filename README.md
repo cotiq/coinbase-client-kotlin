@@ -25,7 +25,7 @@ This is an unofficial Kotlin client for the [Coinbase Advanced Trade API](https:
 The latest release is available on [Maven Central](https://central.sonatype.com/artifact/com.cotiq.lab/coinbase-client-kotlin):
 
 ```kotlin
-implementation("com.cotiq.lab:coinbase-client-kotlin:0.0.1")
+implementation("com.cotiq.lab:coinbase-client-kotlin:0.0.2")
 ```
 
 ## Quick Start
