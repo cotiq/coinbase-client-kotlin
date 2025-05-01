@@ -24,6 +24,7 @@ class RestApiClientBuilder {
 
     private var credentials: ApiCredentials? = null
     private var engine: HttpClientEngine = CIO.create()
+    private var enableDebugLogging: Boolean = false
 
     /**
      * Configures the client to be authenticated with the given [credentials].
@@ -43,6 +44,25 @@ class RestApiClientBuilder {
         return this
     }
 
+    /**
+     * Enables detailed HTTP client logging for debugging purposes.
+     *
+     * When enabled, the HTTP client logs full request and response information,
+     * which is useful for troubleshooting and development.
+     *
+     * It is recommended to disable this in production to avoid logging sensitive data
+     * and impacting performance.
+     *
+     * By default, debug logging is turned off.
+     *
+     * @param enabled Whether to enable HTTP client debug logging.
+     * @return This builder instance for method chaining.
+     */
+    fun enableDebugLogging(enabled: Boolean = true): RestApiClientBuilder {
+        this.enableDebugLogging = enabled
+        return this
+    }
+
     @OptIn(ExperimentalSerializationApi::class)
     fun build(): RestApiClient =
         RestApiClient(
@@ -50,6 +70,7 @@ class RestApiClientBuilder {
             httpClient = HttpClient(engine) {
                 expectSuccess = true
                 install(Logging) {
+                    level = if (enableDebugLogging) LogLevel.ALL else LogLevel.NONE
                     sanitizeHeader { header -> header == HttpHeaders.Authorization }
                 }
                 install(DefaultRequest) {
