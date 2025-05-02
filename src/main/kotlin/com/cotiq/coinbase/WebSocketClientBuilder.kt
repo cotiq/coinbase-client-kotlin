@@ -59,7 +59,7 @@ class WebSocketClientBuilder {
      * Configures the client to be authenticated with the given [credentials].
      * If not set, requests are made without authentication.
      */
-    fun setCredentials(credentials: ApiCredentials): WebSocketClientBuilder {
+    fun setCredentials(credentials: ApiCredentials?): WebSocketClientBuilder {
         this.credentials = credentials
         return this
     }

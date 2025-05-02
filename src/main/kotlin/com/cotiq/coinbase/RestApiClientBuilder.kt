@@ -30,7 +30,7 @@ class RestApiClientBuilder {
      * Configures the client to be authenticated with the given [credentials].
      * If not set, requests are made without authentication.
      */
-    fun setCredentials(credentials: ApiCredentials): RestApiClientBuilder {
+    fun setCredentials(credentials: ApiCredentials?): RestApiClientBuilder {
         this.credentials = credentials
         return this
     }
