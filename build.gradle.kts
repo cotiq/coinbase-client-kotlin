@@ -5,7 +5,7 @@ plugins {
     kotlin("jvm") version "2.1.21"
     kotlin("plugin.serialization") version "2.1.21"
     id("org.jetbrains.dokka") version "2.0.0"
-    id("org.jetbrains.kotlinx.atomicfu") version "0.27.0"
+    id("org.jetbrains.kotlinx.atomicfu") version "0.28.0"
     id("com.gradleup.nmcp").version("0.0.9")
     jacoco
     signing
