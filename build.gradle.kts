@@ -35,7 +35,7 @@ dependencies {
     implementation("io.ktor:ktor-client-logging:$ktor_version")
     implementation("io.ktor:ktor-client-websockets:$ktor_version")
 
-    implementation("com.nimbusds:nimbus-jose-jwt:10.3.1")
+    implementation("com.nimbusds:nimbus-jose-jwt:10.4.1")
     implementation("org.bouncycastle:bcpkix-jdk18on:1.81")
 
     testImplementation(kotlin("test"))
