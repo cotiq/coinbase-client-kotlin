@@ -2,7 +2,7 @@ val ktor_version: String by project
 val kotlin_version: String by project
 
 plugins {
-    kotlin("jvm") version "2.2.10"
+    kotlin("jvm") version "2.2.20"
     kotlin("plugin.serialization") version "2.2.20"
     id("org.jetbrains.dokka") version "2.0.0"
     id("org.jetbrains.kotlinx.atomicfu") version "0.29.0"
