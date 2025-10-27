@@ -3,7 +3,7 @@ val kotlin_version: String by project
 
 plugins {
     kotlin("jvm") version "2.2.20"
-    kotlin("plugin.serialization") version "2.2.20"
+    kotlin("plugin.serialization") version "2.2.21"
     id("org.jetbrains.dokka") version "2.1.0"
     id("org.jetbrains.kotlinx.atomicfu") version "0.29.0"
     id("com.gradleup.nmcp").version("0.0.9")
