@@ -36,7 +36,7 @@ dependencies {
     implementation("io.ktor:ktor-client-websockets:$ktor_version")
 
     implementation("com.nimbusds:nimbus-jose-jwt:10.6")
-    implementation("org.bouncycastle:bcpkix-jdk18on:1.82")
+    implementation("org.bouncycastle:bcpkix-jdk18on:1.83")
 
     testImplementation(kotlin("test"))
     testImplementation("io.ktor:ktor-client-mock:$ktor_version")
